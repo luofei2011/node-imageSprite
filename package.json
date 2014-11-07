@@ -1,0 +1,28 @@
+{
+  "name": "node-imageSprite",
+  "version": "0.0.1",
+  "description": "image sprite",
+  "main": "index.js",
+  "dependencies": {
+    "images": "^2.0.2",
+    "imagemin": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/luofei2011/node-imageSprite"
+  },
+  "keywords": [
+    "image",
+    "sprite"
+  ],
+  "author": "luofeihit2010@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luofei2011/node-imageSprite/issues"
+  },
+  "homepage": "https://github.com/luofei2011/node-imageSprite"
+}
