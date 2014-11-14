@@ -52,6 +52,7 @@ function imageSprite(imageList) {
 		height = size.height;
 	}
 
+	images.setLimit(width, height);
 	var bg = images(width, height);
 	if (!config.transparent)
 		bg.fill(0xff, 0xff, 0xff, 1);
@@ -75,7 +76,7 @@ function imageSprite(imageList) {
 	console.log('[INFO] 图片保存路径！', _o);
 	console.log('[INFO] 开始压缩图片！');
 
-	imagemin.src(config.outputName).dest(config.outputName).use(Imagemin.optipng({ optimizationLevel: 3 }));
+	imagemin.src(_o).dest(_o).use(Imagemin.optipng({ optimizationLevel: 3 }));
 	console.log('[INFO] 图片压缩完毕!');
 
 	imagemin.optimize(function (err, file) {
