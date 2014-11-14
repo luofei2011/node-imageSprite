@@ -52,6 +52,7 @@ function imageSprite(imageList) {
 		height = size.height;
 	}
 
+	images.setLimit(width, height);
 	var bg = images(width, height);
 	if (!config.transparent)
 		bg.fill(0xff, 0xff, 0xff, 1);
