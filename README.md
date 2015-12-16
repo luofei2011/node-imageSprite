@@ -6,6 +6,10 @@
 
 + `node.js`安装：该工具依赖于`node`执行，因此需要在机器上安装`nodejs`
 
+> 对nodejs的版本有要求，主要依赖于images这个包。0.10.*/0.12.*都是ok的，最新的4.0+测试不成功
+
+具体兼容性可看[这个ISSUE](https://github.com/zhangyuanwei/node-images/issues/42)
+
 + 根据`package.json`安装依赖
 
 	```
@@ -19,7 +23,7 @@
 	|--2.png
 	```
 
-__PS:__需要拼合的图片命名最好可以比较
+__PS:__需要拼合的图片命名最好可以比较（因为有拼接的顺序）
 
 + 执行工具
 
