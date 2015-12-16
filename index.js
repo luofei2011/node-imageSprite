@@ -9,7 +9,16 @@ var images = require('images'),
 var imageList = []; // 从给定目录中得到的图片列表
 var sortFunc = config.sortFunc || null;
 
-getImageListFormDir(config.imgSrc);
+function init(config) {
+    config.dest && fs.exists(config.dest, function (exists) {
+        if (!exists) {
+            fs.mkdirSync(config.dest);
+        }
+    });
+    getImageListFormDir(config.imgSrc);
+}
+
+init(config);
 
 function getImageListFormDir(path) {
     fs.exists(path, function(e) {
