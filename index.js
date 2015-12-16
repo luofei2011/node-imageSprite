@@ -7,6 +7,7 @@ var images = require('images'),
 	imagemin = new Imagemin();
 
 var imageList = []; // 从给定目录中得到的图片列表
+var sortFunc = config.sortFunc || null;
 
 getImageListFormDir(config.imgSrc);
 
@@ -18,7 +19,7 @@ function getImageListFormDir(path) {
 					console.log('[ERROR] ', '读取文件错误！');
 				} else {
 					if (files.length) {
-						files = files.sort(); // 根据文件名做一个简单的排序
+						files = files.sort(sortFunc); // 根据文件名做一个简单的排序
 						if (path[path.length - 1] !== '/')
 							path = path + '/';
 						files.forEach(function(file, index) {
